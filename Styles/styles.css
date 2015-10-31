@@ -1,0 +1,19 @@
+﻿body {
+    padding-top:70px;
+}
+
+.about-me {
+    padding-bottom:40px;
+}
+
+.contact {
+    padding-top:40px;
+    background-color: #A2A2A2;
+    font-size: 32pt;
+    padding-bottom:40px;
+    text-align:center;
+}
+
+a {
+    color:inherit;
+}
