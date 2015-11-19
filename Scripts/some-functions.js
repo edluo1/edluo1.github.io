@@ -14,3 +14,26 @@
         }
     }
 }
+
+(function($, viewport){
+    $(document).ready(function () {
+        $('#arrow').text(function () {
+            if (viewport.is('xs') | viewport.is('sm')) {
+                return '^';
+            } else {
+                return '<-';
+            }
+        });
+        $(window).resize(
+                viewport.changed(function () {
+                    $('#arrow').text(function () {
+                        if (viewport.is('xs') | viewport.is('sm')) {
+                            return '^';
+                        } else {
+                            return '<-';
+                        }
+                    });
+                })
+            );
+    });
+})(jQuery, ResponsiveBootstrapToolkit);
