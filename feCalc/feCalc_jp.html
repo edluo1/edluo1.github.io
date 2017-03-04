@@ -11,6 +11,77 @@
 </head>
 <body>
 	<h1>普通の計算機</h1>
+	<div class="container-fluid">
+	<form action="" method = "post" enctype="multipart/form-data" id="dmgForm">
+		<div class="row">
+			<div class="col-md-6">
+			<fieldset class="player form-group">
+			
+				<p><label for="p1HP">HP:</label><input type="number" id="p1HP" value="20"></p>
+				<p><label for="p1Speed">攻速</label><input type="number" id="p1Speed" value="10"> <label><input type="checkbox" id="p1Brave" value="">勇者の武器</label></p>
+				<p><label for="p1Hit">命中</label><input type="number" id="p1Hit" value="100"></p>
+				<p><label for="p1Dmg">威力</label><input type="number" id="p1Dmg" value="10"></p>
+				<p><label for="p1Crit">必殺</label><input type="number" id="p1Crit" value="2"></p>
+			</fieldset>
+			</div>
+			<div class="col-md-6">
+			<fieldset class="enemy form-group">
+				<p><label for="p2HP">HP:</label><input type="number" id="p2HP" value="20"></p>
+				<p><label for="p2Speed">攻速</label><input type="number" id="p2Speed" value="10"> <label><input type="checkbox" id="p2Brave" value="">勇者の武器</label></p>
+				<p><label for="p2Hit">命中</label><input type="number" id="p2Hit" value="100"></p>
+				<p><label for="p2Dmg">威力</label><input type="number" id="p2Dmg" value="10"></p>
+				<p><label for="p2Crit">必殺</label><input type="number" id="p2Crit" value="2"></p>
+			</fieldset>
+			</div>
+		</div>
+			<br />
+			<button id="calc" class="btn btn-default" type="button" value="Calculate Chances">確率計算</button>
+		
+	<div class="btn-group" data-toggle="buttons">
+	  <label class="btn btn-primary active">
+	    <input type="radio" name="r_truehit" id="option1" autocomplete="off" checked value="no_truehit">1つ乱数
+	  </label>
+	  <label class="btn btn-primary">
+	    <input type="radio" name="r_truehit" id="option2" autocomplete="off" value="truehit"> 
+	    2つ乱数の平均
+	  </label>
+	</div>
+
+
+	</form>
+	</div>
+
+	<table class="table-bordered">
+    	<tr><td>与えたダメージ</td><td>受けたダメージ</td><td>確率</td></tr>
+    	<tbody id="t-body">
+
+    	</tbody>
+    </table>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="dmgCalc.js"></script>
+    <script src="commands.js"></script>
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>ファイアーエムブレムのダメージ計算機</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/calc.css" rel="stylesheet">
+</head>
+<body>
+	<h1>普通の計算機</h1>
 	<form action="" method = "post" enctype="multipart/form-data">
 	<div class="row-fluid">
 		<fieldset class="player">
