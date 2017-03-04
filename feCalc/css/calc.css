@@ -1,0 +1,17 @@
+
+.player 
+{
+	border: solid 1px #080808;
+	background-color:blue;	
+}
+
+.enemy
+{
+	border: solid 1px #080808;
+	background-color:red;	
+}
+
+label
+{
+	color:yellow;
+}
