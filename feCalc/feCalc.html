@@ -34,8 +34,9 @@
 			</fieldset>
 			</div>
 		</div>
-			<br />
-			<button id="calc" class="btn btn-default" type="button" value="Calculate Chances">Calculate Chances</button>
+			<h2>Calculate Chances</h2>
+			<button id="calc" class="btn btn-default" type="button" value="Calculate Chances">Player Attacks</button>
+			<button id="calc-enemy" class="btn btn-default" type="button" value="Calculate Chances">Enemy Attacks</button>
 		
 	<div class="btn-group" data-toggle="buttons">
 	  <label class="btn btn-primary active">
@@ -43,7 +44,11 @@
 	  </label>
 	  <label class="btn btn-primary">
 	    <input type="radio" name="r_truehit" id="option2" autocomplete="off" value="truehit"> 
-	    True Hit
+	    True Hit [(A+B)/2]
+	  </label>
+	  <label class="btn btn-primary">
+	    <input type="radio" name="r_truehit" id="option2" autocomplete="off" value="fates_hit"> 
+	    Fates Weighted Average [(3A+B)/4 if hit >= 50]
 	  </label>
 	</div>
 
@@ -51,10 +56,10 @@
 	</form>
 	</div>
 
-	<table class="table-bordered">
-    	<tr><td>Damage Dealt</td><td>Damage Received</td><td>Chance</td></tr>
+	<table class="table table-bordered">
+    	<tr><th>Damage Dealt by Player</th><th>Damage Received</th><th>Chance</th></tr>
     	<tbody id="t-body">
-
+    	<tr><td>Results will show up here.</td></tr>
     	</tbody>
     </table>
 

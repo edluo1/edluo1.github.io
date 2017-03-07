@@ -34,8 +34,9 @@
 			</fieldset>
 			</div>
 		</div>
-			<br />
-			<button id="calc" class="btn btn-default" type="button" value="Calculate Chances">確率計算</button>
+			<h2>確率計算</h2>
+			<button id="calc" class="btn btn-default" type="button" value="Calculate Chances">プレイヤーの攻撃</button>
+			<button id="calc-enemy" class="btn btn-default" type="button" value="Calculate Chances">敵の攻撃</button>
 		
 	<div class="btn-group" data-toggle="buttons">
 	  <label class="btn btn-primary active">
@@ -45,16 +46,20 @@
 	    <input type="radio" name="r_truehit" id="option2" autocomplete="off" value="truehit"> 
 	    2つ乱数の平均
 	  </label>
+	  <label class="btn btn-primary">
+	    <input type="radio" name="r_truehit" id="option2" autocomplete="off" value="fates_hit"> 
+	    FEifの加重平均[命中は50%以上と(3A+B)/4]
+	  </label>
 	</div>
 
 
 	</form>
 	</div>
 
-	<table class="table-bordered">
-    	<tr><td>与えたダメージ</td><td>受けたダメージ</td><td>確率</td></tr>
+	<table class="table table-bordered">
+    	<tr><th>与えたダメージ</th><th>受けたダメージ</th><th>確率</th></tr>
     	<tbody id="t-body">
-
+    	<tr><td>確率計算を選択と結果が現れる。</td></tr>
     	</tbody>
     </table>
 
