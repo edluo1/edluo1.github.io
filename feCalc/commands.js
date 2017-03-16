@@ -42,7 +42,7 @@ $(document).ready(function() {
     		
 
     		tableHtml += "<td>";	
-    		tableHtml += String(chanceSlot['chance']);
+    		tableHtml += String(chanceSlot['chance'].toString());
     		tableHtml += "</td>";
 
 	    	tableHtml += "</tr>";
