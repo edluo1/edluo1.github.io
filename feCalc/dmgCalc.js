@@ -21,6 +21,7 @@ DmgFunc = {
 	chanceTable: function (hit, dmg, crit, truehit) {
 		/* hit rate and crit rate : n out of 100. dmg is value */
 		/* returns: object containing all damage possibilities */
+		console.log(truehit);
 		if (truehit === 'truehit') {
 			hit = DmgFunc.trueHit(hit);
 		} else if (truehit === 'fates_hit') {
@@ -71,8 +72,7 @@ DmgFunc = {
 		for (var i = 0; i < t1.length; i++) {
 			if (t1[i].damage >= hp2 || t1[i].damageReceived>= hp1) {
 				chanceTable.push(t1[i]); // 
-			}
-			else {
+			} else {
 				for (var j = 0; j < t2.length; j++) {
 					var combineChance = Fraction((t1[i].chance.mul(t2[j].chance))).div(100);
 					var chanceObject = {
@@ -117,6 +117,7 @@ DmgFunc = {
 	    		dmgTable = DmgFunc.counterattackTable(dmgTable, t2, p1.hp, p2.hp);
 	    	}
 	    }
+	    //return dmgTable;
 	    return DmgFunc.mergeChances(dmgTable);
 
 	},
@@ -130,8 +131,9 @@ DmgFunc = {
 		  	r.push(hash[key]);
 		  }
 		  else {
-		  	hash[key].chance.add(e.chance);
+		  	hash[key].chance = hash[key].chance.add(e.chance);
 		  }
+		  console.log(hash[key]);
 		  return r;
 		}, []);
 		return result;
